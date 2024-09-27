@@ -8,7 +8,7 @@ from langchain_community.embeddings import OllamaEmbeddings
 from langchain_ollama import ChatOllama
 from langchain_core.output_parsers import StrOutputParser
 from langchain.prompts import PromptTemplate
-
+from PIL import  Image, ImageTk
 
 
 class ResXprt:
@@ -18,6 +18,14 @@ class ResXprt:
         self.pdf_file = "lesson.pdf"
         self.model = "llama2"
         self.vectorstore = None
+        # background image for the gui component
+        self.bg_image = Image.open("true.jpeg")
+        self.bg_photo = ImageTk.PhotoImage(self.bg_image)
+        self.bg_label = tk.Label(self.root, image=self.bg_photo)
+        self.bg_label.place(x=0, y=0, relwidth=1, relheight=1)
+
+        self.frame = tk.Frame(self.root, bg='white', bd=10)
+        self.frame.place(relx=0.5, rely=0.5, anchor='center')
 
         # Upload PDF
         self.upload_btn = tk.Button(self.root, text="Upload PDF", command=self.upload_pdf)
@@ -28,7 +36,8 @@ class ResXprt:
         self.question_label.pack()
 
         self.question_entry = tk.Entry(self.root, width=50)
-        self.question_entry.pack(expand=True, fill=tk.BOTH)
+        # self.question_entry.pack(expand=True, fill=tk.BOTH)
+        self.question_entry.pack(pady=5)
 
         # Ask button
         self.ask_btn = tk.Button(self.root, text="Ask", command=self.ask_question)
@@ -36,7 +45,8 @@ class ResXprt:
 
         # Answer display
         self.answer_text = scrolledtext.ScrolledText(self.root, width=70, height=15, wrap=tk.WORD)
-        self.answer_text.pack(expand=True, fill=tk.BOTH)
+        # self.answer_text.pack(expand=True, fill=tk.BOTH)
+        self.answer_text.pack(pady=10)
 
     def upload_pdf(self):
         # File dialog to select a file

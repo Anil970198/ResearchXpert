@@ -1,0 +1,5 @@
+langchain_community
+langchain_ollama
+pillow
+pypdf
+faiss-cpu/faiss-gpu

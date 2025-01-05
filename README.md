@@ -41,7 +41,7 @@ tkinter
 ```
 # Interface
 
-![quesrtion and answer](https://github.com/user-attachments/assets/77b3827e-b403-447f-b24f-9b72786df2e2)
 ![first window](https://github.com/user-attachments/assets/400f57ec-34e5-4460-bd4b-99f752f364b1)
 ![uploaded and chuked](https://github.com/user-attachments/assets/e4056159-fb1a-4d03-981b-0c1b5815b296)
 ![uploaded and asking question](https://github.com/user-attachments/assets/feaa1278-30c4-4892-a50a-12f56a9ec4bd)
+![quesrtion and answer](https://github.com/user-attachments/assets/77b3827e-b403-447f-b24f-9b72786df2e2)
